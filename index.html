@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="SegDINO3D: 3D Instance Segmentation Empowered by Both Image-Level and Object-Level 2D Features.">
+  <meta name="keywords" content="SegDINO3D, 3D Instance Segmentation, 2D Features">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SegDINO3D: 3D Instance Segmentation Empowered by Both Image-Level and Object-Level 2D Features</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <!-- Rounded font for title -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title" style="display:flex; align-items:center; justify-content:center; gap:0.1em; font-size:2.6rem;">
+            <img src="./static/images/icon.svg" alt="SegDINO3D icon" style="height:4.0em; max-height:4.0em; flex:0 0 auto;">
+            <span>SegDINO3D: 3D Instance Segmentation Empowered by Both Image-Level and Object-Level 2D Features</span>
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=-RSeOl0AAAAJ&hl=en">Jinyuan Qu</a><sup>1,5*</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?view_op=list_works&hl=zh-CN&user=zdgHNmkAAAAJ&gmla=AMpAcmTJNHoetv6zgfzZkIRcYsFr0UkGGDyl5tAp5etuBqhz3lzYZCQrVDot02xVQ1XTbnMS1fPdAfe0-2--aTXOtewokjyShNLOQQyyhtkolwaz0hvENZpi-pJ-Wg">Hongyang Li</a><sup>2,5*</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=YurWtIEAAAAJ&hl=en">Xingyu Chen</a><sup>3,5</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=nkSVY3MAAAAJ">Shilong Liu</a><sup>4</sup>,
+            </span><br/>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=oQXfkSQAAAAJ&hl=en">Yukai Shi</a><sup>1,5</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?user=cW4ILs0AAAAJ&hl=zh-CN&oi=sra">Tianhe Ren</a><sup>5</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Ruitao Jing</a><sup>1,5</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=zh-CN&user=fIlGZToAAAAJ">Lei Zhang</a><sup>5&dagger;</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Tsinghua University,</span>
+            <span class="author-block"><sup>2</sup>South China University of Technology,</span>
+            <span class="author-block"><sup>3</sup>Zhongguancun Academy,</span>
+            <span class="author-block"><sup>4</sup>Princeton University,</span>
+            <span class="author-block"><sup>5</sup>International Digital Economy Academy (IDEA)</span>
+          </div>
+          <p class="is-size-6 has-text-centered symbol-legend-row" style="margin-top:0.4rem;">
+            <span class="symbol-legend">* Equal Contribution</span>
+            <span class="symbol-legend">&nbsp;&dagger;&nbsp;Corresponding Author</span>
+          </p>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2509.16098"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- arXiv Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2509.16098"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <!-- <i class="ai ai-arxiv"></i> -->
+                      <img src="./static/images/arxiv.png" alt="Hugging Face" style="height:1em; vertical-align:middle">
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/IDEA-Research/SegDINO3D"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/JinyuanQu/SegDINO3D"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <!-- <i class="far fa-images"></i> -->
+                      <img src="./static/images/hf-logo.svg" alt="Hugging Face" style="height:1em; vertical-align:middle">
+                  </span>
+                  <span>Datasets</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/demo.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <!-- SegDINO3D -->
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In this paper, we present <strong>SegDINO3D</strong>, a novel Transformer encoder-decoder framework for 3D instance segmentation. As 3D training data is generally not as sufficient as 2D training images, SegDINO3D is designed to fully leverage 2D representation from a pre-trained 2D detection model, including both image-level and object-level features, for improving 3D representation. SegDINO3D takes both a point cloud and its associated 2D images as input. In the encoder stage, it first enriches each 3D point by retrieving 2D image features from its corresponding image views and then leverages a 3D encoder for 3D context fusion. In the decoder stage, it formulates 3D object queries as 3D anchor boxes and performs cross-attention from 3D queries to 2D object queries obtained from 2D images using the 2D detection model. These 2D object queries serve as a compact object-level representation of 2D images, effectively avoiding the challenge of keeping thousands of image feature maps in the memory while faithfully preserving the knowledge of the pre-trained 2D model. The introducing of 3D box queries also enables the model to modulate cross-attention using the predicted boxes for more precise querying. SegDINO3D achieves the state-of-the-art performance on the ScanNetV2 and ScanNet200 3D instance segmentation benchmarks. Notably, on the challenging ScanNet200 dataset, SegDINO3D significantly outperforms prior methods by <strong>+8.6</strong> and <strong>+6.8</strong> mAP on the validation and hidden test sets, respectively, demonstrating its superiority.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <p>
+            (a) Overview of SegDINO3D. Given a point cloud and its corresponding posed multi-view RGB images, SegDINO3D extracts features for each 3D point via a Nearest View Sampling strategy, and then utilizes a 3D encoder to fuse global contextual information. In the decoder, we employ the proposed Box-Modulated Cross-Attention and Distance-Aware Cross-Attention to update the 3D object queries.
+            (b) Visual illustration of the Nearest View Sampling strategy. Each 3D point calculates its distance to all the views that it is visible to finds the top-k nearest views (red dash lines).
+            (c) Visual illustration of 2D object queries construction. Each 2D object query is assigned a 3D center computed as the medoid of its corresponding 3D points. The green points on the right side show the distribution of the 2D object queries' 3D centers in the scene.
+          </p>
+          <div class="publication-banner">
+            <img src="./static/images/method.png" alt="Method overview" class="method-image" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ Method. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Qualitative Performance. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Qualitative Performance</h2>
+        <div class="content has-text-justified">
+          <p>
+            Visualization of the predicted 3D instance bounding boxes and 3D instance masks.
+          </p>
+          <figure class="publication-banner">
+            <img src="./static/images/qualitative.png" alt="Qualitative Performance" class="method-image" />
+          </figure>
+          <!-- <p>
+            Visual comparison with the baseline method on the ScanNet200 validation set. We visualize only the predictions with a confidence score greater than 0.5. The red boxes indicate instances missed by the baseline, the blue boxes indicate instances incorrectly segmented by the baseline, and the green boxes indicate additional instances segmented by our method.
+          </p>
+          <figure class="publication-banner">
+            <img src="./static/images/qualitative_compare.png" alt="Qualitative Performance Comparison" class="method-image" />
+          </figure> -->
+        </div>
+      </div>
+    </div>
+    <!--/ Qualitative Performance. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Quantitative Results. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Quantitative Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            On the challenging ScanNet200 dataset, SegDINO3D significantly outperforms prior methods by <strong>+8.6</strong> and <strong>+6.8</strong> mAP on the validation and hidden test sets, respectively, demonstrating its superiority.
+          </p>
+          <figure class="publication-banner">
+            <img src="./static/images/results_scannet200.png" alt="Quantitative Results on ScanNet200" class="method-image" />
+          </figure>
+        </div>
+      </div>
+    </div>
+    <!--/ Quantitative Results. -->
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{qu2025segdino3d,
+  title={SegDINO3D: 3D Instance Segmentation Empowered by Both Image-Level and Object-Level 2D Features},
+  author={Qu, Jinyuan and Li, Hongyang and Chen, Xingyu and Liu, Shilong and Shi, Yukai and Ren, Tianhe and Jing, Ruitao and Zhang, Lei},
+  journal={arXiv preprint arXiv:2509.16098},
+  year={2025}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Source code of this website is modified from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+            We thank the authors for their open-source project.
+          </p>
+          <p>
+              <a href="#top">Back to top</a>
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

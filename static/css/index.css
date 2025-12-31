@@ -1,0 +1,219 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dnerf {
+  font-variant: small-caps;
+}
+
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+
+.publication-title {
+}
+
+.publication-banner {
+  max-height: parent;
+
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+}
+
+.publication-header .hero-body {
+}
+
+.publication-title {
+  font-family: 'Nunito', 'Google Sans', sans-serif;
+  font-weight: 700;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors {
+}
+
+.publication-authors a {
+   color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-banner img {
+}
+
+.publication-authors {
+  /*color: #4286f4;*/
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.publication-body img {
+}
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 0;
+  font-size: 0;
+}
+
+.results-carousel video {
+  margin: 0;
+}
+
+
+.interpolation-panel {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.interpolation-panel .interpolation-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.interpolation-video-column {
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+#interpolation-image-wrapper {
+  width: 100%;
+}
+#interpolation-image-wrapper img {
+  border-radius: 5px;
+}
+
+/* Section card wrapper: apply to the inner container so the border
+   adjusts to the actual content width instead of full-bleed section */
+section > .container {
+  border: 1px solid rgba(0,0,0,0.06) !important;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06) !important;
+  border-radius: 10px !important;
+  padding: 1.25rem 1.5rem !important;
+  margin-bottom: 0.45rem !important;
+  background: #ffffff !important;
+}
+
+.section {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+/* For hero/teaser sections which are visually full-bleed, keep the
+   container padding a bit smaller so the card sits nicely within */
+section.hero > .container, section.hero.teaser > .container {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+/* Center BibTeX block while keeping code formatting */
+#BibTeX .content {
+  text-align: center;
+}
+#BibTeX pre {
+  display: inline-block;
+  text-align: left;
+  max-width: 90%;
+  overflow: auto;
+  padding: 0.75rem;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+
+.section .column.is-four-fifths > :is(h2, .content) {
+  width: 120%;
+  max-width: none;
+  margin-left: -10%;
+  box-sizing: border-box;
+}
+/* .method-image {
+  width: 120%;
+  max-width: none;
+  display: block;
+  margin-left: -10%;
+  border-radius: 6px;
+} */
+
+/* Legend spacing for author symbols */
+.symbol-legend {
+  display: inline-block;
+}
+.symbol-legend + .symbol-legend {
+  margin-left: 1.2rem;
+}
+
