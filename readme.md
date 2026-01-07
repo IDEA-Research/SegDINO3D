@@ -52,9 +52,9 @@ bash scripts/eval.sh
 
 ## Training
 
-For training on ScanNet200, please prepare the pretrained backbone and put it to ./pretrained_backbone before training. The backbone is initialized from [Mask3D](https://github.com/JonasSchult/Mask3D) checkpoint and can be downloaded [here](https://drive.google.com/file/d/1rwhz1ZU3pDhPu_79pc8kocfNOwk6wCIz/view?usp=drive_link).
+For training on ScanNet200, please prepare the pretrained backbone "mask3d_scannet200_aligned.pth" and put it to ./pretrained_backbone before training. The backbone is initialized from [Mask3D](https://github.com/JonasSchult/Mask3D) checkpoint and can be downloaded [here](https://drive.google.com/drive/folders/1I6l8yBqMluAduMyzxD8ThnVOdpuWt3_r?usp=drive_link).
 
-For training on ScanNet, please prepare the pretrained backbone and put it to ./pretrained_backbone before training. The backbone is initialized from [SSTNet](https://github.com/Gorilla-Lab-SCUT/SSTNet) checkpoint and can be downloaded [here](https://drive.google.com/file/d/1JVxzEeC_dAGrFXR9O1uQOsDnq8auN4PO/view?usp=drive_link).
+For training on ScanNet, please prepare the pretrained backbone "aligned_sstnet_scannet.pth" and put it to ./pretrained_backbone before training. The backbone is initialized from [SSTNet](https://github.com/Gorilla-Lab-SCUT/SSTNet) checkpoint and can be downloaded [here](https://drive.google.com/drive/folders/1I6l8yBqMluAduMyzxD8ThnVOdpuWt3_r?usp=drive_link).
 
 ```shell
 # Select the dataset used for training in train.sh manually.
