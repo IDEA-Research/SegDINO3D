@@ -6,6 +6,9 @@
 # Modified from: MAFT (https://github.com/dvlab-research/Mask-Attention-Free-Transformer)
 # Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
 # ------------------------------------------------------------------------
+# Modified from: 3DETR (https://github.com/facebookresearch/3detr)
+# Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
+# ------------------------------------------------------------------------
 
 """ Utility functions for processing point clouds.
 

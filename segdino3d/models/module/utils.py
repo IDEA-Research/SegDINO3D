@@ -6,6 +6,9 @@
 # Modified from: MAFT (https://github.com/dvlab-research/Mask-Attention-Free-Transformer)
 # Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
 # ------------------------------------------------------------------------
+# Modified from: 3DETR (https://github.com/facebookresearch/3detr)
+# Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
+# ------------------------------------------------------------------------
 
 """
 Various positional encodings for the transformer.
@@ -98,7 +101,7 @@ class PositionEmbeddingCoordsSine(nn.Module):
             assert isinstance(modulated, torch.Tensor)
             for j in range(len(final_embeds)):
                 final_embeds[j] *= modulated[:, :, j:j+1]
-        final_embeds = torch.cat(final_embeds, dim=2) #.permute(0, 2, 1)
+        final_embeds = torch.cat(final_embeds, dim=2)
         return final_embeds
 
     def get_fourier_embeddings(self, xyz, num_channels=None, input_range=None, modulated=None):
@@ -133,7 +136,7 @@ class PositionEmbeddingCoordsSine(nn.Module):
         final_embeds = [xyz_proj.sin(), xyz_proj.cos()]
 
         # return batch x d_pos x npoints embedding
-        final_embeds = torch.cat(final_embeds, dim=2) #.permute(0, 2, 1)
+        final_embeds = torch.cat(final_embeds, dim=2)
         return final_embeds
 
     def forward(self, xyz, num_channels=None, input_range=None, modulated=None):

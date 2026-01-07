@@ -106,3 +106,4 @@ We would like to thank the authors of the following projects for their excellent
 - [SPFormer](https://github.com/sunjiahao1999/SPFormer) - Superpoint Transformer for 3D Scene Instance Segmentation
 - [Mask3D](https://github.com/JonasSchult/Mask3D) - Mask3D: Mask Transformer for 3D Instance Segmentation
 - [MAFT](https://github.com/dvlab-research/Mask-Attention-Free-Transformer) - Mask-Attention-Free Transformer for 3D Instance Segmentation
+- [3DETR](https://github.com/facebookresearch/3detr) - 3DETR: An End-to-End Transformer Model for 3D Object Detection
