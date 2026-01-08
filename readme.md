@@ -87,11 +87,11 @@ Additionally, our performance on the ScanNet200 hidden test set is shown below:
 If you find this work helpful for your research, please cite:
 
 ```text
-@article{qu2025segdino3d,
-  title={SegDINO3D: 3D Instance Segmentation Empowered by Both Image-Level and Object-Level 2D Features},
+@inproceedings{qu2025segdino3d,
+  title={{SegDINO3D: 3D Instance Segmentation Empowered by Both Image-Level and Object-Level 2D Features}},
   author={Qu, Jinyuan and Li, Hongyang and Chen, Xingyu and Liu, Shilong and Shi, Yukai and Ren, Tianhe and Jing, Ruitao and Zhang, Lei},
-  journal={arXiv preprint arXiv:2509.16098},
-  year={2025}
+  booktitle={Association for the Advancement of Artificial Intelligence (AAAI)},
+  year={2025},
 }
 ```
 
