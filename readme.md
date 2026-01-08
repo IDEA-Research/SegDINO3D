@@ -91,7 +91,7 @@ If you find this work helpful for your research, please cite:
   title={{SegDINO3D: 3D Instance Segmentation Empowered by Both Image-Level and Object-Level 2D Features}},
   author={Qu, Jinyuan and Li, Hongyang and Chen, Xingyu and Liu, Shilong and Shi, Yukai and Ren, Tianhe and Jing, Ruitao and Zhang, Lei},
   booktitle={Association for the Advancement of Artificial Intelligence (AAAI)},
-  year={2025},
+  year={2026},
 }
 ```
 
