@@ -29,6 +29,9 @@ After downloading and processing the data, place it in the `./data/` directory.
 2. We provide the DINO-X features required for training and evaluation, which are available for download on [Hugging Face](https://huggingface.co/datasets/JinyuanQu/SegDINO3D).
 After downloading, please place them in the `./data/features_2d/` directory.
 
+3. To extract the optional Grounding DINO + SAM features locally, follow the
+[Grounding DINO feature extraction guide](tools/grounding_dino_feature_extraction/README.md).
+
 The directory structure after data preparation should be as below:
 
 ```shell
@@ -101,6 +104,7 @@ We would like to thank the authors of the following projects for their excellent
 
 - [DINO-X](https://github.com/IDEA-Research/DINO-X-API) - DINO-X: A Unified Vision Model for Open-World Object Detection and Understanding
 - [Grounding DINO](https://github.com/IDEA-Research/GroundingDINO) - Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection
+- [Segment Anything](https://github.com/facebookresearch/segment-anything) - Segment Anything
 - [OneFormer3D](https://github.com/filaPro/oneformer3d) - OneFormer3D: One Transformer for Unified Point Cloud Segmentation
 - [DAB-DETR](https://github.com/IDEA-Research/DAB-DETR) - DAB-DETR: Dynamic Anchor Boxes are Better Queries for DETR
 - [SPFormer](https://github.com/sunjiahao1999/SPFormer) - Superpoint Transformer for 3D Scene Instance Segmentation

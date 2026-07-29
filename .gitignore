@@ -8,14 +8,17 @@ dist
 cache
 logs
 .vscode
+.venv/
 
 data/scannet/instance_mask
 data/scannet/semantic_mask
 data/scannet/super_points
 data/scannet/scannet_instance_data
 data/scannet/points
+data/scannet/ExtractedRGBD_GAP1
 data/scannet200
 data/features_2d
 checkpoint
+tools/grounding_dino_feature_extraction/checkpoints
 pretrained_backbone
 visualizations*

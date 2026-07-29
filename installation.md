@@ -138,3 +138,25 @@
 - Find the file: `~/anaconda3/envs/dino3d/lib/python3.9/site-packages/mmdet3d/models/layers/spconv/overwrite_spconv/write_spconv2.py`
 
 - Change the line `version = local metadata.get('version', None)` to `version = local metadata.get('version', 2)`
+
+## Optional: Grounding DINO feature extraction
+
+The optional extractor can use a virtual-environment overlay of the configured
+`dino3d` environment. The overlay reuses PyTorch 2.4 and CUDA 12.1 without
+copying or reinstalling them:
+
+```shell
+conda activate dino3d
+python -m venv --system-site-packages .venv/segdino3d-gdsam
+source .venv/segdino3d-gdsam/bin/activate
+pip install -r tools/grounding_dino_feature_extraction/requirements.txt
+pip install --no-deps -e tools/grounding_dino_feature_extraction/third_party/GroundingDINO
+```
+
+Packages installed after activation remain in the overlay. Installing them
+directly into `dino3d` is also supported.
+Build the extension on a machine with a visible CUDA GPU, or set
+`TORCH_CUDA_ARCH_LIST` for the target GPUs when compiling on a login node.
+
+See the [feature extraction guide](tools/grounding_dino_feature_extraction/README.md)
+for ScanNet RGB-D preparation, checkpoints, and extraction commands.
